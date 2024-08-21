@@ -140,7 +140,7 @@ const Getallballotpapers: React.FC = () => {
                       {item.name}
                     </DialogTitle>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
+                  <DialogContent className="w-full">
                     <DialogHeader>
                       <DialogTitle>{item.noc}</DialogTitle>
                     </DialogHeader>
