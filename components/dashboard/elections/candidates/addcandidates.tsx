@@ -12,7 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { UserPlus, UserRoundCheck } from "lucide-react";
+import { Loader, UserPlus, UserRoundCheck } from "lucide-react";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import React, { useState } from "react";
@@ -104,11 +104,20 @@ const AddCandidates: React.FC<AddCandidatesProps> = ({ id, portfolios }) => {
           </div>
         </div>
         <SheetFooter>
-          <SheetClose asChild>
+          
             <Button type="submit" onClick={handleUpload}>
-              Add
+            {
+        uploading ? (
+          <>
+          <p>Creating Election </p>
+          <Loader size={20} className="animate-spin ml-2" />
+          </>
+        ):(
+          "Add"
+        )
+      }
             </Button>
-          </SheetClose>
+         
         </SheetFooter>
       </SheetContent>
     </Sheet>
