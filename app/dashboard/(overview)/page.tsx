@@ -1,3 +1,4 @@
+import GetSelfStatsCard from '@/components/dashboard/overview/getselfstatscard'
 import { Button } from '@/components/ui/button'
 import Emptyinterface from '@/components/ui/emptyinterface'
 import React from 'react'
@@ -9,7 +10,7 @@ const OverviewPage = () => {
         <p className='text-3xl font-black'>Dashboard</p>
         </div>
     <div className='p-3 h-full flex flex-col gap-5 border-[0.5px] border-primary bg-background rounded-xl'>
-    <Emptyinterface />
+    <GetSelfStatsCard />
     </div>
    </div>
 
